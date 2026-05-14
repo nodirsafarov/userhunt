@@ -1,0 +1,30 @@
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - misspell
+    - revive
+    - gofmt
+    - goimports
+
+linters-settings:
+  revive:
+    rules:
+      - name: var-naming
+      - name: exported
+
+issues:
+  exclude-dirs:
+    - dist
+    - bin
+  max-issues-per-linter: 0
+  max-same-issues: 0

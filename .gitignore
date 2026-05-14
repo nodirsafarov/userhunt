@@ -1,0 +1,19 @@
+/userhunt
+/userhunt.exe
+/bin/
+/dist/
+/coverage.out
+/coverage.html
+*.test
+*.out
+*.prof
+*.log
+*.swp
+.idea/
+.vscode/
+.DS_Store
+*~
+# user-generated reports
+*_results.json
+*_results.csv
+*_results.md
