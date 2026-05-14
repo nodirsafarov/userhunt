@@ -30,21 +30,21 @@ var (
 )
 
 type runOpts struct {
-	timeout      time.Duration
-	concurrency  int
-	retries      int
-	userAgent    string
-	proxy        string
-	output       string
-	format       string
-	onlyFound    bool
-	noColor      bool
-	noBanner     bool
-	category     string
-	listSites    bool
-	includeNSFW  bool
-	silent       bool
-	exitNonzero  bool
+	timeout     time.Duration
+	concurrency int
+	retries     int
+	userAgent   string
+	proxy       string
+	output      string
+	format      string
+	onlyFound   bool
+	noColor     bool
+	noBanner    bool
+	category    string
+	listSites   bool
+	includeNSFW bool
+	silent      bool
+	exitNonzero bool
 }
 
 func main() {
