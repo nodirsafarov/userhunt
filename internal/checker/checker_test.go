@@ -23,7 +23,7 @@ func TestDecideStatus(t *testing.T) {
 		{403, StatusError},
 	}
 	for _, tc := range cases {
-		if got := decide(p, tc.code, nil); got != tc.want {
+		if got := decide(p, tc.code, nil, ""); got != tc.want {
 			t.Errorf("code %d: got %s, want %s", tc.code, got, tc.want)
 		}
 	}
@@ -34,10 +34,10 @@ func TestDecideContentNotExists(t *testing.T) {
 		CheckType:        platforms.CheckContent,
 		NotExistsContent: []string{"No such user"},
 	}
-	if got := decide(p, 200, []byte("page with No such user marker")); got != StatusNotFound {
+	if got := decide(p, 200, []byte("page with No such user marker"), ""); got != StatusNotFound {
 		t.Errorf("expected NotFound, got %s", got)
 	}
-	if got := decide(p, 200, []byte("profile content")); got != StatusFound {
+	if got := decide(p, 200, []byte("profile content"), ""); got != StatusFound {
 		t.Errorf("expected Found, got %s", got)
 	}
 }
@@ -47,11 +47,24 @@ func TestDecideContentExists(t *testing.T) {
 		CheckType:     platforms.CheckContent,
 		ExistsContent: []string{"profile_photo"},
 	}
-	if got := decide(p, 200, []byte("html with profile_photo here")); got != StatusFound {
+	if got := decide(p, 200, []byte("html with profile_photo here"), ""); got != StatusFound {
 		t.Errorf("expected Found, got %s", got)
 	}
-	if got := decide(p, 200, []byte("nothing matching")); got != StatusNotFound {
+	if got := decide(p, 200, []byte("nothing matching"), ""); got != StatusNotFound {
 		t.Errorf("expected NotFound (no marker match), got %s", got)
+	}
+}
+
+func TestDecideFinalURLOverride(t *testing.T) {
+	p := platforms.Platform{
+		CheckType:         platforms.CheckStatus,
+		NotExistsFinalURL: []string{"/login", "/sorry"},
+	}
+	if got := decide(p, 200, nil, "https://example.com/login?return=/x"); got != StatusNotFound {
+		t.Errorf("expected NotFound from redirect to /login, got %s", got)
+	}
+	if got := decide(p, 200, nil, "https://example.com/profile/x"); got != StatusFound {
+		t.Errorf("expected Found when final URL has no marker, got %s", got)
 	}
 }
 

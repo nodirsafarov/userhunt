@@ -206,7 +206,14 @@ func (c *Checker) probe(ctx context.Context, username string, p platforms.Platfo
 	}
 
 	res.HTTPCode = resp.StatusCode
-	res.Status = decide(p, resp.StatusCode, body)
+	finalURL := target
+	if resp.Request != nil && resp.Request.URL != nil {
+		finalURL = resp.Request.URL.String()
+	}
+	res.Status = decide(p, resp.StatusCode, body, finalURL)
+	if res.Status == StatusFound {
+		res.URL = finalURL
+	}
 	return res
 }
 
@@ -242,7 +249,13 @@ func (c *Checker) pickUserAgent() string {
 	return defaultUserAgents[c.rng.Intn(len(defaultUserAgents))]
 }
 
-func decide(p platforms.Platform, code int, body []byte) Status {
+func decide(p platforms.Platform, code int, body []byte, finalURL string) Status {
+	for _, marker := range p.NotExistsFinalURL {
+		if marker != "" && strings.Contains(finalURL, marker) {
+			return StatusNotFound
+		}
+	}
+
 	switch p.CheckType {
 	case platforms.CheckStatus:
 		if code == http.StatusOK {

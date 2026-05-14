@@ -34,14 +34,20 @@ const (
 // target username at probe time. For CheckContent platforms, ExistsContent
 // takes priority over NotExistsContent: if any ExistsContent substring is
 // found, the account is reported as existing.
+//
+// NotExistsFinalURL applies to both check types and runs before any body
+// inspection: if the response's final URL (after redirects) contains any of
+// the listed substrings, the account is treated as not found. This handles
+// sites that redirect missing users to "/login", "/sorry", or a homepage.
 type Platform struct {
-	Name             string    `json:"name"`
-	URL              string    `json:"url"`
-	Category         string    `json:"category"`
-	CheckType        CheckType `json:"check_type"`
-	NotExistsContent []string  `json:"not_exists_content,omitempty"`
-	ExistsContent    []string  `json:"exists_content,omitempty"`
-	NSFW             bool      `json:"nsfw,omitempty"`
+	Name              string    `json:"name"`
+	URL               string    `json:"url"`
+	Category          string    `json:"category"`
+	CheckType         CheckType `json:"check_type"`
+	NotExistsContent  []string  `json:"not_exists_content,omitempty"`
+	ExistsContent     []string  `json:"exists_content,omitempty"`
+	NotExistsFinalURL []string  `json:"not_exists_final_url,omitempty"`
+	NSFW              bool      `json:"nsfw,omitempty"`
 }
 
 // BuildURL substitutes the username placeholder in p.URL.

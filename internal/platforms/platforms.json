@@ -1,630 +1,201 @@
 {
   "platforms": [
-    {
-      "name": "GitHub",
-      "url": "https://github.com/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "GitLab",
-      "url": "https://gitlab.com/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Bitbucket",
-      "url": "https://bitbucket.org/{}/",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Dev.to",
-      "url": "https://dev.to/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "HackerNews",
-      "url": "https://news.ycombinator.com/user?id={}",
-      "category": "tech",
-      "check_type": "content",
-      "not_exists_content": ["No such user."]
-    },
-    {
-      "name": "Medium",
-      "url": "https://medium.com/@{}",
-      "category": "writing",
-      "check_type": "status"
-    },
-    {
-      "name": "CodePen",
-      "url": "https://codepen.io/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Replit",
-      "url": "https://replit.com/@{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "NPM",
-      "url": "https://www.npmjs.com/~{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "PyPI",
-      "url": "https://pypi.org/user/{}/",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Codeforces",
-      "url": "https://codeforces.com/profile/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Codewars",
-      "url": "https://www.codewars.com/users/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "LeetCode",
-      "url": "https://leetcode.com/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "HackerRank",
-      "url": "https://www.hackerrank.com/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Kaggle",
-      "url": "https://www.kaggle.com/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Hashnode",
-      "url": "https://hashnode.com/@{}",
-      "category": "writing",
-      "check_type": "status"
-    },
-    {
-      "name": "Docker Hub",
-      "url": "https://hub.docker.com/u/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "RubyGems",
-      "url": "https://rubygems.org/profiles/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Crates.io",
-      "url": "https://crates.io/users/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Stack Overflow",
-      "url": "https://stackoverflow.com/users/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "AskUbuntu",
-      "url": "https://askubuntu.com/users/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Exercism",
-      "url": "https://exercism.org/profiles/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Atcoder",
-      "url": "https://atcoder.jp/users/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Reddit",
-      "url": "https://www.reddit.com/user/{}",
-      "category": "social",
-      "check_type": "content",
-      "not_exists_content": ["Sorry, nobody on Reddit goes by that name.", "page not found"]
-    },
-    {
-      "name": "Pinterest",
-      "url": "https://www.pinterest.com/{}/",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "TikTok",
-      "url": "https://www.tiktok.com/@{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Threads",
-      "url": "https://www.threads.net/@{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "VK",
-      "url": "https://vk.com/{}",
-      "category": "social",
-      "check_type": "content",
-      "not_exists_content": ["This page is unavailable", "404 Not Found", "Эта страница недоступна"]
-    },
-    {
-      "name": "OK.ru",
-      "url": "https://ok.ru/{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Quora",
-      "url": "https://www.quora.com/profile/{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "ProductHunt",
-      "url": "https://www.producthunt.com/@{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Lobsters",
-      "url": "https://lobste.rs/u/{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Mastodon (mastodon.social)",
-      "url": "https://mastodon.social/@{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Mastodon (fosstodon.org)",
-      "url": "https://fosstodon.org/@{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Bluesky",
-      "url": "https://bsky.app/profile/{}.bsky.social",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "Disqus",
-      "url": "https://disqus.com/by/{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "YouTube",
-      "url": "https://www.youtube.com/@{}",
-      "category": "video",
-      "check_type": "status"
-    },
-    {
-      "name": "Vimeo",
-      "url": "https://vimeo.com/{}",
-      "category": "video",
-      "check_type": "status"
-    },
-    {
-      "name": "Twitch",
-      "url": "https://www.twitch.tv/{}",
-      "category": "video",
-      "check_type": "content",
-      "not_exists_content": ["Sorry. Unless you've got a time machine"]
-    },
-    {
-      "name": "Dailymotion",
-      "url": "https://www.dailymotion.com/{}",
-      "category": "video",
-      "check_type": "status"
-    },
-    {
-      "name": "Rumble",
-      "url": "https://rumble.com/user/{}",
-      "category": "video",
-      "check_type": "status"
-    },
-    {
-      "name": "SoundCloud",
-      "url": "https://soundcloud.com/{}",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Last.fm",
-      "url": "https://www.last.fm/user/{}",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Mixcloud",
-      "url": "https://www.mixcloud.com/{}/",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Spotify",
-      "url": "https://open.spotify.com/user/{}",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Bandcamp",
-      "url": "https://bandcamp.com/{}",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Audiomack",
-      "url": "https://audiomack.com/{}",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Genius",
-      "url": "https://genius.com/{}",
-      "category": "music",
-      "check_type": "status"
-    },
-    {
-      "name": "Steam",
-      "url": "https://steamcommunity.com/id/{}",
-      "category": "gaming",
-      "check_type": "content",
-      "not_exists_content": ["The specified profile could not be found."]
-    },
-    {
-      "name": "Roblox",
-      "url": "https://www.roblox.com/users/profile?username={}",
-      "category": "gaming",
-      "check_type": "content",
-      "not_exists_content": ["Page cannot be found or no longer exists"]
-    },
-    {
-      "name": "Chess.com",
-      "url": "https://www.chess.com/member/{}",
-      "category": "gaming",
-      "check_type": "status"
-    },
-    {
-      "name": "Lichess",
-      "url": "https://lichess.org/@/{}",
-      "category": "gaming",
-      "check_type": "status"
-    },
-    {
-      "name": "Speedrun.com",
-      "url": "https://www.speedrun.com/user/{}",
-      "category": "gaming",
-      "check_type": "status"
-    },
-    {
-      "name": "ItchIO",
-      "url": "https://{}.itch.io/",
-      "category": "gaming",
-      "check_type": "status"
-    },
-    {
-      "name": "GOG",
-      "url": "https://www.gog.com/u/{}",
-      "category": "gaming",
-      "check_type": "status"
-    },
-    {
-      "name": "DeviantArt",
-      "url": "https://www.deviantart.com/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "ArtStation",
-      "url": "https://www.artstation.com/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Behance",
-      "url": "https://www.behance.net/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Dribbble",
-      "url": "https://dribbble.com/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Flickr",
-      "url": "https://www.flickr.com/people/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "500px",
-      "url": "https://500px.com/p/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Unsplash",
-      "url": "https://unsplash.com/@{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "VSCO",
-      "url": "https://vsco.co/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Imgur",
-      "url": "https://imgur.com/user/{}",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Substack",
-      "url": "https://substack.com/@{}",
-      "category": "writing",
-      "check_type": "status"
-    },
-    {
-      "name": "WordPress.com",
-      "url": "https://{}.wordpress.com",
-      "category": "writing",
-      "check_type": "status"
-    },
-    {
-      "name": "Wattpad",
-      "url": "https://www.wattpad.com/user/{}",
-      "category": "writing",
-      "check_type": "status"
-    },
-    {
-      "name": "Archive of Our Own",
-      "url": "https://archiveofourown.org/users/{}",
-      "category": "writing",
-      "check_type": "status"
-    },
-    {
-      "name": "Newgrounds",
-      "url": "https://{}.newgrounds.com",
-      "category": "creative",
-      "check_type": "status"
-    },
-    {
-      "name": "Letterboxd",
-      "url": "https://letterboxd.com/{}/",
-      "category": "entertainment",
-      "check_type": "status"
-    },
-    {
-      "name": "AniList",
-      "url": "https://anilist.co/user/{}",
-      "category": "entertainment",
-      "check_type": "status"
-    },
-    {
-      "name": "MyAnimeList",
-      "url": "https://myanimelist.net/profile/{}",
-      "category": "entertainment",
-      "check_type": "status"
-    },
-    {
-      "name": "Trakt.tv",
-      "url": "https://trakt.tv/users/{}",
-      "category": "entertainment",
-      "check_type": "status"
-    },
-    {
-      "name": "IMDb",
-      "url": "https://www.imdb.com/user/{}",
-      "category": "entertainment",
-      "check_type": "status"
-    },
-    {
-      "name": "Goodreads",
-      "url": "https://www.goodreads.com/{}",
-      "category": "entertainment",
-      "check_type": "status"
-    },
-    {
-      "name": "Keybase",
-      "url": "https://keybase.io/{}",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "About.me",
-      "url": "https://about.me/{}",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "Linktree",
-      "url": "https://linktr.ee/{}",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "Bento.me",
-      "url": "https://bento.me/{}",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "Beacons.ai",
-      "url": "https://beacons.ai/{}",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "Carrd",
-      "url": "https://{}.carrd.co/",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "Gravatar",
-      "url": "https://en.gravatar.com/{}",
-      "category": "tools",
-      "check_type": "status"
-    },
-    {
-      "name": "Patreon",
-      "url": "https://www.patreon.com/{}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Ko-fi",
-      "url": "https://ko-fi.com/{}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Buy Me a Coffee",
-      "url": "https://www.buymeacoffee.com/{}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Gumroad",
-      "url": "https://{}.gumroad.com/",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Etsy",
-      "url": "https://www.etsy.com/shop/{}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Fiverr",
-      "url": "https://www.fiverr.com/{}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Slideshare",
-      "url": "https://www.slideshare.net/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "TryHackMe",
-      "url": "https://tryhackme.com/p/{}",
-      "category": "security",
-      "check_type": "status"
-    },
-    {
-      "name": "HackTheBox",
-      "url": "https://app.hackthebox.com/users/{}",
-      "category": "security",
-      "check_type": "status"
-    },
-    {
-      "name": "Root-Me",
-      "url": "https://www.root-me.org/{}",
-      "category": "security",
-      "check_type": "status"
-    },
-    {
-      "name": "HackerOne",
-      "url": "https://hackerone.com/{}",
-      "category": "security",
-      "check_type": "status"
-    },
-    {
-      "name": "Bugcrowd",
-      "url": "https://bugcrowd.com/{}",
-      "category": "security",
-      "check_type": "status"
-    },
-    {
-      "name": "AskFM",
-      "url": "https://ask.fm/{}",
-      "category": "social",
-      "check_type": "status"
-    },
-    {
-      "name": "CashApp",
-      "url": "https://cash.app/${}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Venmo",
-      "url": "https://venmo.com/{}",
-      "category": "monetization",
-      "check_type": "status"
-    },
-    {
-      "name": "Telegram",
-      "url": "https://t.me/{}",
-      "category": "social",
-      "check_type": "content",
-      "exists_content": ["tgme_page_photo_image"]
-    },
-    {
-      "name": "Wikipedia (EN)",
-      "url": "https://en.wikipedia.org/wiki/User:{}",
-      "category": "knowledge",
-      "check_type": "content",
-      "not_exists_content": ["Wikipedia does not have a user page with this exact name"]
-    },
-    {
-      "name": "Coderbyte",
-      "url": "https://coderbyte.com/profile/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Pastebin",
-      "url": "https://pastebin.com/u/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "Producthunt Maker",
-      "url": "https://www.producthunt.com/makers/{}",
-      "category": "tech",
-      "check_type": "status"
-    },
-    {
-      "name": "IndieHackers",
-      "url": "https://www.indiehackers.com/{}",
-      "category": "tech",
-      "check_type": "status"
-    }
+    { "name": "GitHub", "url": "https://github.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "GitHub Gist", "url": "https://gist.github.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "GitLab", "url": "https://gitlab.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "Bitbucket", "url": "https://bitbucket.org/{}/", "category": "tech", "check_type": "status" },
+    { "name": "Codeberg", "url": "https://codeberg.org/{}", "category": "tech", "check_type": "status" },
+    { "name": "SourceForge", "url": "https://sourceforge.net/u/{}/profile", "category": "tech", "check_type": "status" },
+    { "name": "SourceHut", "url": "https://sr.ht/~{}", "category": "tech", "check_type": "status" },
+    { "name": "Dev.to", "url": "https://dev.to/{}", "category": "tech", "check_type": "status" },
+    { "name": "Hashnode", "url": "https://hashnode.com/@{}", "category": "tech", "check_type": "status" },
+    { "name": "HackerNews", "url": "https://news.ycombinator.com/user?id={}", "category": "tech", "check_type": "content", "not_exists_content": ["No such user."] },
+    { "name": "Medium", "url": "https://medium.com/@{}", "category": "writing", "check_type": "status" },
+    { "name": "CodePen", "url": "https://codepen.io/{}", "category": "tech", "check_type": "status" },
+    { "name": "Replit", "url": "https://replit.com/@{}", "category": "tech", "check_type": "status" },
+    { "name": "JSFiddle", "url": "https://jsfiddle.net/user/{}/fiddles/", "category": "tech", "check_type": "status" },
+    { "name": "CodeSandbox", "url": "https://codesandbox.io/u/{}", "category": "tech", "check_type": "status" },
+    { "name": "StackBlitz", "url": "https://stackblitz.com/@{}", "category": "tech", "check_type": "status" },
+    { "name": "NPM", "url": "https://www.npmjs.com/~{}", "category": "tech", "check_type": "status" },
+    { "name": "PyPI", "url": "https://pypi.org/user/{}/", "category": "tech", "check_type": "status" },
+    { "name": "RubyGems", "url": "https://rubygems.org/profiles/{}", "category": "tech", "check_type": "status" },
+    { "name": "Crates.io", "url": "https://crates.io/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "Packagist", "url": "https://packagist.org/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "NuGet", "url": "https://www.nuget.org/profiles/{}", "category": "tech", "check_type": "status" },
+    { "name": "Codeforces", "url": "https://codeforces.com/profile/{}", "category": "tech", "check_type": "status" },
+    { "name": "Codewars", "url": "https://www.codewars.com/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "LeetCode", "url": "https://leetcode.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "HackerRank", "url": "https://www.hackerrank.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "Kaggle", "url": "https://www.kaggle.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "Atcoder", "url": "https://atcoder.jp/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "CodeChef", "url": "https://www.codechef.com/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "TopCoder", "url": "https://www.topcoder.com/members/{}", "category": "tech", "check_type": "status" },
+    { "name": "Exercism", "url": "https://exercism.org/profiles/{}", "category": "tech", "check_type": "status" },
+    { "name": "Coderbyte", "url": "https://coderbyte.com/profile/{}", "category": "tech", "check_type": "status" },
+    { "name": "Docker Hub", "url": "https://hub.docker.com/u/{}", "category": "tech", "check_type": "status" },
+    { "name": "Quay.io", "url": "https://quay.io/user/{}", "category": "tech", "check_type": "status" },
+    { "name": "HuggingFace", "url": "https://huggingface.co/{}", "category": "tech", "check_type": "status" },
+    { "name": "Modrinth", "url": "https://modrinth.com/user/{}", "category": "tech", "check_type": "status" },
+    { "name": "Stack Overflow", "url": "https://stackoverflow.com/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "AskUbuntu", "url": "https://askubuntu.com/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "ServerFault", "url": "https://serverfault.com/users/{}", "category": "tech", "check_type": "status" },
+    { "name": "Slideshare", "url": "https://www.slideshare.net/{}", "category": "tech", "check_type": "status" },
+    { "name": "Speaker Deck", "url": "https://speakerdeck.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "Pastebin", "url": "https://pastebin.com/u/{}", "category": "tech", "check_type": "status" },
+    { "name": "ProductHunt", "url": "https://www.producthunt.com/@{}", "category": "tech", "check_type": "status" },
+    { "name": "ProductHunt Maker", "url": "https://www.producthunt.com/makers/{}", "category": "tech", "check_type": "status" },
+    { "name": "IndieHackers", "url": "https://www.indiehackers.com/{}", "category": "tech", "check_type": "status" },
+    { "name": "AlternativeTo", "url": "https://alternativeto.net/user/{}/", "category": "tech", "check_type": "status" },
+    { "name": "StackShare", "url": "https://stackshare.io/{}", "category": "tech", "check_type": "status" },
+    { "name": "JetBrains Marketplace", "url": "https://plugins.jetbrains.com/author/{}", "category": "tech", "check_type": "status" },
+    { "name": "VS Code Marketplace", "url": "https://marketplace.visualstudio.com/publishers/{}", "category": "tech", "check_type": "status" },
+
+
+    { "name": "Reddit", "url": "https://www.reddit.com/user/{}", "category": "social", "check_type": "content", "not_exists_content": ["Sorry, nobody on Reddit goes by that name.", "page not found"] },
+    { "name": "Pinterest", "url": "https://www.pinterest.com/{}/", "category": "social", "check_type": "status", "not_exists_final_url": ["/login", "pinterest.com/?", "/sorry"] },
+    { "name": "TikTok", "url": "https://www.tiktok.com/@{}", "category": "social", "check_type": "status" },
+    { "name": "Threads", "url": "https://www.threads.net/@{}", "category": "social", "check_type": "status" },
+    { "name": "Bluesky", "url": "https://bsky.app/profile/{}.bsky.social", "category": "social", "check_type": "status" },
+    { "name": "VK", "url": "https://vk.com/{}", "category": "social", "check_type": "content", "not_exists_content": ["This page is unavailable", "404 Not Found", "Эта страница недоступна"] },
+    { "name": "OK.ru", "url": "https://ok.ru/{}", "category": "social", "check_type": "status" },
+    { "name": "Quora", "url": "https://www.quora.com/profile/{}", "category": "social", "check_type": "status" },
+    { "name": "Disqus", "url": "https://disqus.com/by/{}", "category": "social", "check_type": "status" },
+    { "name": "AskFM", "url": "https://ask.fm/{}", "category": "social", "check_type": "status" },
+    { "name": "Lobsters", "url": "https://lobste.rs/u/{}", "category": "social", "check_type": "status" },
+    { "name": "Tildes", "url": "https://tildes.net/user/{}", "category": "social", "check_type": "status" },
+    { "name": "Mastodon (mastodon.social)", "url": "https://mastodon.social/@{}", "category": "social", "check_type": "status" },
+    { "name": "Mastodon (fosstodon.org)", "url": "https://fosstodon.org/@{}", "category": "social", "check_type": "status" },
+    { "name": "Mastodon (mstdn.social)", "url": "https://mstdn.social/@{}", "category": "social", "check_type": "status" },
+    { "name": "Mastodon (mas.to)", "url": "https://mas.to/@{}", "category": "social", "check_type": "status" },
+    { "name": "Mastodon (infosec.exchange)", "url": "https://infosec.exchange/@{}", "category": "social", "check_type": "status" },
+    { "name": "Mastodon (hachyderm.io)", "url": "https://hachyderm.io/@{}", "category": "social", "check_type": "status" },
+    { "name": "Pixelfed (pixelfed.social)", "url": "https://pixelfed.social/{}", "category": "social", "check_type": "status" },
+    { "name": "Misskey (misskey.io)", "url": "https://misskey.io/@{}", "category": "social", "check_type": "status" },
+    { "name": "Lemmy.world", "url": "https://lemmy.world/u/{}", "category": "social", "check_type": "status" },
+    { "name": "Lemmy.ml", "url": "https://lemmy.ml/u/{}", "category": "social", "check_type": "status" },
+    { "name": "Kbin.social", "url": "https://kbin.social/u/{}", "category": "social", "check_type": "status" },
+    { "name": "Beehaw", "url": "https://beehaw.org/u/{}", "category": "social", "check_type": "status" },
+    { "name": "Gettr", "url": "https://gettr.com/user/{}", "category": "social", "check_type": "status" },
+    { "name": "Minds", "url": "https://www.minds.com/{}", "category": "social", "check_type": "status" },
+
+    { "name": "YouTube", "url": "https://www.youtube.com/@{}", "category": "video", "check_type": "status" },
+    { "name": "Vimeo", "url": "https://vimeo.com/{}", "category": "video", "check_type": "status" },
+    { "name": "Twitch", "url": "https://www.twitch.tv/{}", "category": "video", "check_type": "content", "not_exists_content": ["Sorry. Unless you've got a time machine"] },
+    { "name": "Dailymotion", "url": "https://www.dailymotion.com/{}", "category": "video", "check_type": "status" },
+    { "name": "Rumble", "url": "https://rumble.com/user/{}", "category": "video", "check_type": "status" },
+    { "name": "BitChute", "url": "https://www.bitchute.com/channel/{}/", "category": "video", "check_type": "status" },
+    { "name": "Odysee", "url": "https://odysee.com/@{}", "category": "video", "check_type": "status" },
+    { "name": "PeerTube (framatube.org)", "url": "https://framatube.org/c/{}/videos", "category": "video", "check_type": "status" },
+    { "name": "Veoh", "url": "https://www.veoh.com/users/{}", "category": "video", "check_type": "status" },
+    { "name": "Vbox7", "url": "https://www.vbox7.com/user:{}", "category": "video", "check_type": "status" },
+
+    { "name": "SoundCloud", "url": "https://soundcloud.com/{}", "category": "music", "check_type": "status" },
+    { "name": "Last.fm", "url": "https://www.last.fm/user/{}", "category": "music", "check_type": "status" },
+    { "name": "Mixcloud", "url": "https://www.mixcloud.com/{}/", "category": "music", "check_type": "status" },
+    { "name": "Spotify", "url": "https://open.spotify.com/user/{}", "category": "music", "check_type": "status", "not_exists_final_url": ["spotify.com/login", "spotify.com/?"] },
+    { "name": "Bandcamp", "url": "https://bandcamp.com/{}", "category": "music", "check_type": "status" },
+    { "name": "Audiomack", "url": "https://audiomack.com/{}", "category": "music", "check_type": "status" },
+    { "name": "Genius", "url": "https://genius.com/{}", "category": "music", "check_type": "status" },
+    { "name": "ReverbNation", "url": "https://www.reverbnation.com/{}", "category": "music", "check_type": "status" },
+    { "name": "BandLab", "url": "https://www.bandlab.com/{}", "category": "music", "check_type": "status" },
+    { "name": "Hearthis.at", "url": "https://hearthis.at/{}/", "category": "music", "check_type": "status" },
+    { "name": "Songkick", "url": "https://www.songkick.com/users/{}", "category": "music", "check_type": "status" },
+    { "name": "BeatPort", "url": "https://www.beatport.com/artist/{}", "category": "music", "check_type": "status" },
+
+    { "name": "Steam", "url": "https://steamcommunity.com/id/{}", "category": "gaming", "check_type": "content", "not_exists_content": ["The specified profile could not be found."] },
+    { "name": "Roblox", "url": "https://www.roblox.com/users/profile?username={}", "category": "gaming", "check_type": "content", "not_exists_content": ["Page cannot be found or no longer exists"] },
+    { "name": "Chess.com", "url": "https://www.chess.com/member/{}", "category": "gaming", "check_type": "status" },
+    { "name": "Lichess", "url": "https://lichess.org/@/{}", "category": "gaming", "check_type": "status" },
+    { "name": "Speedrun.com", "url": "https://www.speedrun.com/user/{}", "category": "gaming", "check_type": "status" },
+    { "name": "Itch.io", "url": "https://{}.itch.io/", "category": "gaming", "check_type": "status" },
+    { "name": "GOG", "url": "https://www.gog.com/u/{}", "category": "gaming", "check_type": "status" },
+    { "name": "GameJolt", "url": "https://gamejolt.com/@{}", "category": "gaming", "check_type": "status" },
+    { "name": "ModDB", "url": "https://www.moddb.com/members/{}", "category": "gaming", "check_type": "status" },
+    { "name": "IndieDB", "url": "https://www.indiedb.com/members/{}", "category": "gaming", "check_type": "status" },
+    { "name": "Nexus Mods", "url": "https://www.nexusmods.com/users/{}", "category": "gaming", "check_type": "status" },
+    { "name": "Curseforge", "url": "https://www.curseforge.com/members/{}", "category": "gaming", "check_type": "status" },
+    { "name": "GameBanana", "url": "https://gamebanana.com/members/{}", "category": "gaming", "check_type": "status" },
+    { "name": "OSU!", "url": "https://osu.ppy.sh/users/{}", "category": "gaming", "check_type": "status" },
+    { "name": "Faceit", "url": "https://www.faceit.com/en/players/{}", "category": "gaming", "check_type": "status" },
+
+    { "name": "DeviantArt", "url": "https://www.deviantart.com/{}", "category": "creative", "check_type": "status" },
+    { "name": "ArtStation", "url": "https://www.artstation.com/{}", "category": "creative", "check_type": "status" },
+    { "name": "Behance", "url": "https://www.behance.net/{}", "category": "creative", "check_type": "status" },
+    { "name": "Dribbble", "url": "https://dribbble.com/{}", "category": "creative", "check_type": "status" },
+    { "name": "Flickr", "url": "https://www.flickr.com/people/{}", "category": "creative", "check_type": "status" },
+    { "name": "500px", "url": "https://500px.com/p/{}", "category": "creative", "check_type": "status" },
+    { "name": "Unsplash", "url": "https://unsplash.com/@{}", "category": "creative", "check_type": "status" },
+    { "name": "VSCO", "url": "https://vsco.co/{}", "category": "creative", "check_type": "status" },
+    { "name": "Imgur", "url": "https://imgur.com/user/{}", "category": "creative", "check_type": "status" },
+    { "name": "Newgrounds", "url": "https://{}.newgrounds.com", "category": "creative", "check_type": "status" },
+    { "name": "Sketchfab", "url": "https://sketchfab.com/{}", "category": "creative", "check_type": "status" },
+    { "name": "Foundation", "url": "https://foundation.app/@{}", "category": "creative", "check_type": "status" },
+    { "name": "OpenSea", "url": "https://opensea.io/{}", "category": "creative", "check_type": "status" },
+    { "name": "Polycount", "url": "https://polycount.com/profile/{}", "category": "creative", "check_type": "status", "not_exists_final_url": ["/signin", "/entry/signin"] },
+    { "name": "BlenderArtists", "url": "https://blenderartists.org/u/{}/summary", "category": "creative", "check_type": "status" },
+    { "name": "ZBrushCentral", "url": "https://www.zbrushcentral.com/u/{}", "category": "creative", "check_type": "status" },
+
+    { "name": "Substack", "url": "https://substack.com/@{}", "category": "writing", "check_type": "status" },
+    { "name": "WordPress.com", "url": "https://{}.wordpress.com", "category": "writing", "check_type": "status" },
+    { "name": "Wattpad", "url": "https://www.wattpad.com/user/{}", "category": "writing", "check_type": "status" },
+    { "name": "Archive of Our Own", "url": "https://archiveofourown.org/users/{}", "category": "writing", "check_type": "status" },
+    { "name": "Penzu", "url": "https://penzu.com/public/{}", "category": "writing", "check_type": "status" },
+    { "name": "Tumblr", "url": "https://{}.tumblr.com", "category": "writing", "check_type": "status", "not_exists_final_url": ["www.tumblr.com/blog_auth", "/login", "/explore"] },
+
+    { "name": "Letterboxd", "url": "https://letterboxd.com/{}/", "category": "entertainment", "check_type": "status" },
+    { "name": "AniList", "url": "https://anilist.co/user/{}", "category": "entertainment", "check_type": "status", "not_exists_final_url": ["/404", "/not-found"] },
+    { "name": "MyAnimeList", "url": "https://myanimelist.net/profile/{}", "category": "entertainment", "check_type": "status" },
+    { "name": "Trakt.tv", "url": "https://trakt.tv/users/{}", "category": "entertainment", "check_type": "status" },
+    { "name": "IMDb", "url": "https://www.imdb.com/user/{}", "category": "entertainment", "check_type": "status" },
+    { "name": "Goodreads", "url": "https://www.goodreads.com/{}", "category": "entertainment", "check_type": "status" },
+    { "name": "LibraryThing", "url": "https://www.librarything.com/profile/{}", "category": "entertainment", "check_type": "status" },
+    { "name": "BookCrossing", "url": "https://www.bookcrossing.com/mybookshelf/{}", "category": "entertainment", "check_type": "status" },
+
+    { "name": "Keybase", "url": "https://keybase.io/{}", "category": "tools", "check_type": "status" },
+    { "name": "About.me", "url": "https://about.me/{}", "category": "tools", "check_type": "status" },
+    { "name": "Linktree", "url": "https://linktr.ee/{}", "category": "tools", "check_type": "status" },
+    { "name": "Bento.me", "url": "https://bento.me/{}", "category": "tools", "check_type": "status" },
+    { "name": "Beacons.ai", "url": "https://beacons.ai/{}", "category": "tools", "check_type": "status" },
+    { "name": "Carrd", "url": "https://{}.carrd.co/", "category": "tools", "check_type": "status" },
+    { "name": "Gravatar", "url": "https://en.gravatar.com/{}", "category": "tools", "check_type": "status" },
+    { "name": "Lnk.bio", "url": "https://lnk.bio/{}", "category": "tools", "check_type": "status" },
+    { "name": "Linkpop", "url": "https://linkpop.com/{}", "category": "tools", "check_type": "status" },
+    { "name": "Hoo.be", "url": "https://hoo.be/{}", "category": "tools", "check_type": "status" },
+    { "name": "Allmylinks", "url": "https://allmylinks.com/{}", "category": "tools", "check_type": "status" },
+
+    { "name": "Patreon", "url": "https://www.patreon.com/{}", "category": "monetization", "check_type": "status", "not_exists_final_url": ["/profile/creators", "/explore", "/home"] },
+    { "name": "Ko-fi", "url": "https://ko-fi.com/{}", "category": "monetization", "check_type": "status" },
+    { "name": "Buy Me a Coffee", "url": "https://www.buymeacoffee.com/{}", "category": "monetization", "check_type": "status" },
+    { "name": "Gumroad", "url": "https://{}.gumroad.com/", "category": "monetization", "check_type": "status" },
+    { "name": "Etsy", "url": "https://www.etsy.com/shop/{}", "category": "monetization", "check_type": "status" },
+    { "name": "Fiverr", "url": "https://www.fiverr.com/{}", "category": "monetization", "check_type": "status" },
+    { "name": "Upwork", "url": "https://www.upwork.com/freelancers/~{}", "category": "monetization", "check_type": "status" },
+    { "name": "CashApp", "url": "https://cash.app/${}", "category": "monetization", "check_type": "status" },
+    { "name": "Venmo", "url": "https://venmo.com/{}", "category": "monetization", "check_type": "status" },
+    { "name": "Liberapay", "url": "https://liberapay.com/{}/", "category": "monetization", "check_type": "status" },
+    { "name": "Open Collective", "url": "https://opencollective.com/{}", "category": "monetization", "check_type": "status" },
+
+    { "name": "TryHackMe", "url": "https://tryhackme.com/p/{}", "category": "security", "check_type": "status" },
+    { "name": "HackTheBox", "url": "https://app.hackthebox.com/users/{}", "category": "security", "check_type": "status" },
+    { "name": "Root-Me", "url": "https://www.root-me.org/{}", "category": "security", "check_type": "status" },
+    { "name": "HackerOne", "url": "https://hackerone.com/{}", "category": "security", "check_type": "status" },
+    { "name": "Bugcrowd", "url": "https://bugcrowd.com/{}", "category": "security", "check_type": "status" },
+    { "name": "Intigriti", "url": "https://www.intigriti.com/researchers/{}", "category": "security", "check_type": "status" },
+    { "name": "YesWeHack", "url": "https://yeswehack.com/hunters/{}", "category": "security", "check_type": "status" },
+    { "name": "OpenBugBounty", "url": "https://www.openbugbounty.org/researchers/{}/", "category": "security", "check_type": "status" },
+    { "name": "Pentesterlab", "url": "https://pentesterlab.com/profile/{}", "category": "security", "check_type": "status" },
+    { "name": "Synack", "url": "https://www.synack.com/red-team/{}", "category": "security", "check_type": "status" },
+
+    { "name": "Telegram", "url": "https://t.me/{}", "category": "social", "check_type": "content", "exists_content": ["tgme_page_photo_image"] },
+    { "name": "Wikipedia (EN)", "url": "https://en.wikipedia.org/wiki/User:{}", "category": "knowledge", "check_type": "content", "not_exists_content": ["Wikipedia does not have a user page with this exact name"] },
+    { "name": "Wikipedia (RU)", "url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:{}", "category": "knowledge", "check_type": "content", "not_exists_content": ["В Википедии нет статьи"] },
+
+    { "name": "ENS", "url": "https://app.ens.domains/{}.eth", "category": "web3", "check_type": "status" },
+    { "name": "Lens Protocol", "url": "https://hey.xyz/u/{}", "category": "web3", "check_type": "status" },
+    { "name": "Mirror.xyz", "url": "https://mirror.xyz/{}", "category": "web3", "check_type": "status", "not_exists_final_url": ["paragraph.com", "/sign-in"] },
+    { "name": "Farcaster (Warpcast)", "url": "https://warpcast.com/{}", "category": "web3", "check_type": "status" },
+    { "name": "Rarible", "url": "https://rarible.com/{}", "category": "web3", "check_type": "status", "not_exists_final_url": ["/404", "/not-found"] },
+
+    { "name": "Discord (invite)", "url": "https://discord.com/invite/{}", "category": "social", "check_type": "content", "not_exists_content": ["Invite Invalid", "Unable to accept invite"] }
   ]
 }

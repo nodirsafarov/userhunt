@@ -1,7 +1,7 @@
 <h1 align="center">userhunt</h1>
 
 <p align="center">
-  <b>Fast OSINT username enumerator across 100+ platforms.</b><br>
+  <b>Fast OSINT username enumerator across 180+ platforms.</b><br>
   Single Go binary. Install in 10 seconds. Beautiful colored output. <i>Sherlock, in Go.</i>
 </p>
 
@@ -23,7 +23,7 @@
     [+] Reddit        https://www.reddit.com/user/torvalds<br>
     [+] Keybase       https://keybase.io/torvalds<br>
     ...<br>
-    Found: 55 / 103 platforms — 17.0s
+    Found: 80+ / 180+ platforms — under 15s
   </code>
 </p>
 
@@ -163,6 +163,8 @@ For every platform, userhunt picks one of two strategies (declared in [`internal
 - **`status`** — `200 OK` ⇒ exists, `404` / `410` ⇒ does not exist, anything else ⇒ error.
 - **`content`** — fetch the page and look for marker substrings. If an `exists_content` marker is present ⇒ exists. If a `not_exists_content` marker is present ⇒ does not exist. Useful for SPAs that always return `200`.
 
+Both strategies can be combined with **`not_exists_final_url`** — if the response's final URL (after redirects) contains any of the configured substrings (`/login`, `/sorry`, `/404`, etc.), the account is treated as not found. This kills a huge class of false positives where sites silently redirect missing users.
+
 The HTTP client uses HTTP/2, keep-alive, connection pooling, retries with exponential backoff and a rotating set of real-browser User-Agents. Each probe reads at most 256 KiB of body, so even SPA-heavy sites stay fast.
 
 > [!IMPORTANT]
@@ -190,6 +192,18 @@ For SPA / JS-heavy sites, prefer `content` mode:
   "category": "social",
   "check_type": "content",
   "not_exists_content": ["User not found", "404"]
+}
+```
+
+For sites that silently redirect missing users (to a login page or homepage) instead of returning `404`, combine with `not_exists_final_url`:
+
+```json
+{
+  "name": "RedirectorSite",
+  "url": "https://example.com/profile/{}",
+  "category": "social",
+  "check_type": "status",
+  "not_exists_final_url": ["/login", "/sorry", "/404"]
 }
 ```
 
